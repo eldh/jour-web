@@ -58,10 +58,11 @@
   "devDependencies": {},
   "scripts": {
     "start": "NODE_ENV=development node ./start.js",
-    "build": "npm run bundle && npm run uglify && npm run copy-assets",
     "bundle": "NODE_ENV=production node ./build.js",
     "copy-assets": "cp -r assets/ ./build",
     "uglify": "./node_modules/.bin/uglifyjs build/bundle.js -c warnings=false -m --screw-ie8 -o build/bundle.js",
+    "build": "npm run bundle && npm run uglify && npm run copy-assets",
+    "deploy": "npm run build && ./deploy.sh",
     "test": "ava"
   },
   "keywords": [
