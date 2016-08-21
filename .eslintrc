@@ -1,9 +1,10 @@
 {
   "parser": "babel-eslint",
-  "extends": "standard",
+  "extends": ["standard", "plugin:import/warnings"],
   "plugins": [
     "ava",
-    "react"
+    "react",
+    "import"
   ],
   "env": {
     "browser": true,
@@ -92,6 +93,16 @@
     "ava/use-t": 1,
     "ava/use-test": 1,
     "ava/use-true-false": 1,
+    "import/no-unresolved": [1, {"commonjs": true, "amd": true}],
+    "import/no-extraneous-dependencies": 1,
+    "import/named": 1,
+    "import/namespace": 1,
+    "import/default": 1,
+    "import/export": 1,
+    "import/imports-first": 1,
+    "import/no-mutable-exports": 1,
+    "import/no-named-as-default-member": 1,
+    "import/no-named-as-default": 1,
     "react/display-name": 1,
     "react/no-deprecated": [1, {"react": "0.14.0"}],
     "react/no-did-mount-set-state": [1, "allow-in-func"],
