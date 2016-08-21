@@ -1,0 +1,3 @@
+# Jour
+
+A minimal diary.
