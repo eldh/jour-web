@@ -10,6 +10,7 @@ const defaultStyles = {
   justifyContent: 'flex-start',
   alignContent: 'center',
   flexGrow: 1,
+  height: 'auto',
 }
 
 const ContentContainer = ({children, styles}) => {

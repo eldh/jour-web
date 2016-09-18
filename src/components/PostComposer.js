@@ -6,11 +6,12 @@ export default class PostComposer extends Component {
     const {updatePost, post} = this.props
     return h(Textarea, {
       value: post.value,
-      onChange: (e) => updatePost({...post, value: e.currentTarget.value}),
+      onChange: (e) => updatePost({...post, value: e.target.value}),
       placeholder: post.status && 'What happened today?',
     })
   }
 }
+
 PostComposer.propTypes = {
   post: PropTypes.object,
   updatePost: PropTypes.func.isRequired,
