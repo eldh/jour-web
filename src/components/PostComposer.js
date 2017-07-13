@@ -2,6 +2,11 @@ import {PropTypes, Component, createElement as h} from 'react'
 import Textarea from './Textarea.js'
 
 export default class PostComposer extends Component {
+  static propTypes = {
+    post: PropTypes.object,
+    updatePost: PropTypes.func.isRequired,
+  }
+
   render() {
     const {updatePost, post} = this.props
     return h(Textarea, {
@@ -10,9 +15,4 @@ export default class PostComposer extends Component {
       placeholder: post.status && 'What happened today?',
     })
   }
-}
-
-PostComposer.propTypes = {
-  post: PropTypes.object,
-  updatePost: PropTypes.func.isRequired,
 }

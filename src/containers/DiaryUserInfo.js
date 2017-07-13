@@ -1,5 +1,4 @@
 import {connect} from 'react-redux'
-import UserInfo from '../components/UserInfo'
 import {getDiary, signIn, listenForUser, selectPost} from '../actions'
 
 const mapDispatchToProps = (dispatch) => {
@@ -21,6 +20,6 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = ({user, diary}) => ({user, diary})
 
-const DiaryUserInfo = connect(mapStateToProps, mapDispatchToProps)(UserInfo)
+const DiaryUserInfo = connect(mapStateToProps, mapDispatchToProps)
 
 export default DiaryUserInfo

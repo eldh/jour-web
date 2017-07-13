@@ -38,6 +38,13 @@ const renderDates = ({posts, selectedPost}, selectPost) => {
 }
 
 class UserInfo extends Component {
+  static propTypes = {
+    diary: PropTypes.object,
+    getDiary: PropTypes.func.isRequired,
+    listenForUser: PropTypes.func.isRequired,
+    selectPost: PropTypes.func.isRequired,
+  }
+
   constructor() {
     super(...arguments)
     this.state = {open: false}
@@ -56,13 +63,6 @@ class UserInfo extends Component {
       )
     )
   }
-}
-
-UserInfo.propTypes = {
-  diary: PropTypes.object,
-  getDiary: PropTypes.func.isRequired,
-  listenForUser: PropTypes.func.isRequired,
-  selectPost: PropTypes.func.isRequired,
 }
 
 export default UserInfo

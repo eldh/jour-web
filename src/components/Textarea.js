@@ -36,5 +36,4 @@ const Textarea = ({children, onChange, ...rest}) =>
     ...rest,
   })
 
-Textarea.displayName = 'Textarea'
 export default Textarea

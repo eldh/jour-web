@@ -3,6 +3,11 @@ import LoggedInUserInfo from './LoggedInUserInfo'
 import LoggedOutUserInfo from './LoggedOutUserInfo'
 
 class UserInfo extends Component {
+  static propTypes = {
+    user: PropTypes.object.isRequired,
+    listenForUser: PropTypes.func.isRequired,
+  }
+
   componentDidMount() {
     this.props.listenForUser()
   }
@@ -12,11 +17,6 @@ class UserInfo extends Component {
       h(LoggedOutUserInfo, this.props) :
       h(LoggedInUserInfo, this.props)
   }
-}
-
-UserInfo.propTypes = {
-  user: PropTypes.object.isRequired,
-  listenForUser: PropTypes.func.isRequired,
 }
 
 export default UserInfo
